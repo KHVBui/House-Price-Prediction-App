@@ -11,6 +11,7 @@ x = df[['Rooms', 'Distance']] # independent variables
 lin_model = linear_model.LinearRegression()
 lin_model.fit(x, y)
 
+# Test the output of the model
 input_rooms = 15
 input_distance = 61
 print(f'rooms: {input_rooms}')
