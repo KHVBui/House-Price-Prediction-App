@@ -11,7 +11,12 @@ x = df[['Rooms', 'Distance']] # independent variables
 lin_model = linear_model.LinearRegression()
 lin_model.fit(x, y)
 
-lin_model.predict([[15, 61]])
+input_rooms = 15
+input_distance = 61
+print(f'rooms: {input_rooms}')
+print(f'distance (km): {input_distance}')
+print(lin_model.predict([[input_rooms, input_distance]])) 
+print(f'score: {lin_model.score(x, y)}')
 
 # Save the model using pickle
-pickle.dump(lin_model, open('model.pkl', 'wb'))
+pickle.dump(lin_model, open('model.pkl', 'wb')) # save the model in a pickle file
